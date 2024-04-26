@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Classes\Algorithm\**" />
+    <EmbeddedResource Remove="Classes\Algorithm\**" />
+    <None Remove="Classes\Algorithm\**" />
+    <Page Remove="Classes\Algorithm\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Libs.Sheets.OfficeOpenXml" Version="1.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Daten_Generator\Daten_Generator.csproj" />
+  </ItemGroup>
+
+</Project>
